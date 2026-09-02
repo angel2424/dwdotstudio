@@ -1,0 +1,32 @@
+---
+interface Props {
+    light?: boolean;
+    label: string;
+    href: string;
+    variant?: 'primary' | 'secondary' | 'outlined' | 'ghost';
+}
+
+const {href, variant = 'primary', label, light = false} = Astro.props
+
+const variantStyles = {
+    primary: 'bg-primary text-font-light hover:bg-primary-dark px-8 py-3',
+    secondary: 'bg-secondary-light text-font hover:bg-secondary px-8 py-3',
+    outlined: '',
+    ghost: 'px-2'
+}
+
+const baseStyles = 'rounded-full text-xs group transition-all ease-linear duration-150 flex gap-3 items-center font-unb w-fit'
+---
+
+<a class:list={[baseStyles, variantStyles[variant], light && (variant === 'outlined' || variant === 'ghost') ? 'text-font-light!' : '' ]} href={href}>
+    <slot name="icon" class="" />
+    <p class="clip h-4 flex flex-col gap-2 justify-start">
+        <span class="group-hover:-translate-y-6 transition-all ease-in-out duration-200">
+            {label}
+        </span>
+        <span class="group-hover:-translate-y-6 transition-all ease-in-out duration-200">
+            {label}
+        </span>
+    </p>
+    <slot name="right-icon" class="group-hover:translate-1" />
+</a>

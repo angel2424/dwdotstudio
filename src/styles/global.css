@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #2B7CA1;
+    --color-primary-light: #369BC9;
+    --color-primary-dark: #205D79;
+
+    --color-secondary: #CED0C8;
+    --color-secondary-light: #E7E7E4;
+    --color-secondary-dark: #B6B8AD;
+
+    --color-font: #022331;
+    --color-font-light: #f6f6f6;
+
+    --font-unb: 'Unbounded Variable', sans-serif;
+
+    /* Body text - minimal scaling */
+  --text-xs: clamp(0.75rem, 0.75rem + 0vw, 0.75rem);
+  --text-xs--line-height: 1rem;
+
+  --text-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.875rem);
+  --text-sm--line-height: 1.25rem;
+
+  --text-base: clamp(0.9375rem, 0.2vw + 0.89rem, 1rem);
+  --text-base--line-height: 1.5rem;
+
+  --text-lg: clamp(1rem, 0.4vw + 0.91rem, 1.125rem);
+  --text-lg--line-height: 1.75rem;
+
+  /* Subheadings - moderate scaling */
+  --text-xl: clamp(1.125rem, 0.43vw + 1.02rem, 1.25rem);
+  --text-xl--line-height: 1.75rem;
+
+  --text-2xl: clamp(1.25rem, 0.85vw + 1.04rem, 1.5rem);
+  --text-2xl--line-height: 2rem;
+
+  --text-3xl: clamp(1.5rem, 1.28vw + 1.18rem, 1.875rem);
+  --text-3xl--line-height: 2.25rem;
+
+  /* Large headings - aggressive scaling for mobile */
+  --text-4xl: clamp(1.75rem, 1.7vw + 1.32rem, 2.25rem);
+  --text-4xl--line-height: 2.5rem;
+
+  --text-5xl: clamp(2rem, 3.4vw + 1.15rem, 3rem);
+  --text-5xl--line-height: 1;
+
+  --text-6xl: clamp(2.5rem, 4.27vw + 1.43rem, 3.75rem);
+  --text-6xl--line-height: 1;
+
+  --text-7xl: clamp(3rem, 5.1vw + 1.72rem, 4.5rem);
+  --text-7xl--line-height: 1;
+
+  --text-8xl: clamp(3.5rem, 8.5vw + 1.37rem, 6rem);
+  --text-8xl--line-height: 1;
+
+  --text-9xl: clamp(4rem, 13.6vw + 0.6rem, 8rem);
+  --text-9xl--line-height: 1;
+}
+
+body {
+  font-family: 'DM Sans Variable', sans-serif;
+  color: var(--color-gray-600);
+}
+
+.clip {
+    clip-path: inset(0 0 0 0);
+}
+
+.isOpen {
+    transform-origin: 1px 2px;
+}
+
+.isOpen span:first-child {
+    width: 24px;
+    transform: rotate(45deg) translate(1px, 2px);
+    background-color: var(--color-primary-dark);
+}
+.isOpen span:last-child {
+    width: 24px;
+    transform: rotate(-45deg) translate(2px, -4px);
+    background-color: var(--color-primary-dark);
+}

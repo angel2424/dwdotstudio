@@ -1,0 +1,45 @@
+---
+import { ArrowDown, ArrowUpRight } from '@lucide/astro'
+import bgVid from '../../assets/videos/bg-vid.mp4'
+import Button from '../ui/Button.astro'
+---
+
+<section class="lg:pb-8 md:px-11 min-h-screen lg:min-h-[calc(100vh-100px)] h-full flex flex-col">
+    <div class="bg-primary-dark h-full flex-1 lg:mt-3 md:mt-6 xl:mt-10 md:rounded-2xl relative overflow-hidden object-cover">
+        <video id="hero-video" autoplay muted loop class="absolute left-0 top-0 w-full h-full object-cover z-0">
+            <source src={bgVid} type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute top-0 left-0 w-full h-full bg-[#0B1F28]/75 px-6 pt-32 pb-16 md:p-11 xl:p-20 flex flex-col xl:flex-row justify-between rounded-2xl">
+            <div class="max-w-3xl">
+                <p class="font-semibold mb-8 text-secondary-light text-xs">INFRAESTRUCTURA DIGITAL Y CAPTACIÓN LOCAL EN COAHUILA</p>
+                <h1 class="text-font-light font-bold leading-tight text-6xl tracking-normal">
+                    <span class="font-unb">
+                        Tu negocio ya funciona. <br>
+                    </span>
+                    <mark class="bg-primary-dark text-white text-4xl px-4 py-1 box-decoration-clone rounded-lg">
+                        Ahora hagamos que atraiga clientes calificados las 24 horas del día<span class="text-secondary-dark">.</span>
+                    </mark>
+                </h1>
+            </div>
+            <div class="max-w-md self-end">
+                <p class="text-base text-secondary-light mb-6">Mientras dependes de publicaciones en redes sociales que desaparecen en horas, tu competencia captura a los clientes listos para comprar directamente en Google. Diseñamos e implementamos sistemas web ultrarrápidos y optimizados para dominar las búsquedas en tu sector.</p>
+                <div class="flex flex-col gap-6">
+                    <Button label='Solicitar Diagnóstico Gratuito de 20 Minutos' href='/'>
+                        <ArrowUpRight slot='right-icon'} size={'1rem'}/>
+                    </Button>
+                    <Button variant='ghost' light label='Ver Planes y Modelos de Trabajo' href='/'>
+                        <ArrowDown slot='right-icon'} size={'1rem'}/>
+                    </Button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const video = document.getElementById('hero-video') as HTMLVideoElement;
+
+    video.playbackRate = 0.65;
+
+</script>

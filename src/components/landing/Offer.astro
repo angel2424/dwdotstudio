@@ -1,0 +1,199 @@
+---
+import { Image } from "astro:assets";
+import offerImg from '../../assets/images/ds-img1.jpg'
+import warrantyImage from '../../assets/images/warranty.jpg'
+import { ArrowUpRight, ChartPie, Check, FileBadge, MessageCircle, Scroll, Sparkles } from "@lucide/astro";
+import Button from "../ui/Button.astro";
+
+---
+
+<section id="container" class="bg-primary-dark transition-colors ease-linear duration-200">
+    <div class="px-4 md:px-11 lg:px-20 py-28 max-w-7xl mx-auto text-secondary-light">
+        <div class="flex flex-col lg:flex-row gap-20 items-center">
+            <div class="flex-1">
+                <Image src={offerImg} alt='Servicios DevWorks Studio | Imagen' class='w-full aspect-4/3 rounded-2xl object-cover' />
+            </div>
+            <div class="flex-1 py-8 h-full">
+                <p class="font-semibold mb-4 text-secondary text-sm uppercase">Nuestros Servicios</p>
+                <h2 class="text-4xl font-unb font-semibold text-font-light mb-auto">Dos formas de escalar tu presencia digital según la etapa de tu negocio.</h2>
+                <p class="text-lg mt-6">
+                    Tú pones la experiencia en tu industria; nosotros ponemos la infraestructura y el sistema de adquisición.
+                </p>
+            </div>
+        </div>
+        <span class="w-full h-px bg-primary-light block my-20"></span>
+        <div class="px-4">
+            <div class="flex-1 text-center">
+                <Sparkles size={'4rem'} class="mx-auto mb-12"/>
+                <div class="max-w-2xl mx-auto">
+                    <h2 class="text-4xl font-unb font-semibold text-secondary">Sistema de Presencia Total</h2>
+                    <p class="text-base mt-4">Diseñado para empresas y negocios consolidados que buscan una plataforma formal de captación con acompañamiento estratégico 1 a 1.</p>
+                </div>
+            </div>
+            <div class="flex-1 py-4 mt-20">
+                <p class="font-unb text-xl font-semibold bg-secondary-dark text-font px-5 py-1.5 box-decoration-clone w-fit rounded-lg mx-auto">Entregables Clave</p>
+                <ul class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-6">
+                    <li>
+                        <p class="font-bold mb-2">Sitio Web de Alta Conversión:</p>
+                        <p class="text-justify">
+                             Arquitectura ultrarrápida, redacción persuasiva y panel de edición intuitivo (actualiza contenido sin tocar código ni desconfigurar el diseño).
+                        </p>
+                    </li>
+                    <li>
+                        <p class="font-bold mb-2">Identidad y Correo Corporativo:</p>
+                        <p class="text-justify">
+                            Configuración de Google Workspace con 1 año de correo profesional incluido y 1 año de dominio propio.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="font-bold mb-2">Kit de Branding para Redes:</p>
+                        <p class="text-justify">
+                             Guía de marca visual con 15 plantillas para posts, 5 para stories y 5 portadas para reels para proyectar autoridad.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="font-bold mb-2">Perfil de Google Business Optimizado:</p>
+                        <p class="text-justify">
+                             Estrategia para posicionarte en el mapa local cuando busquen tus servicios en tu ciudad.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="font-bold mb-2">Mantenimiento Técnico de por Vida:</p>
+                        <p class="text-justify">
+                             Servidores, certificados SSL y parches de seguridad cubiertos para siempre, sin facturas sorpresa. (Mientras mantengas tus pagos anuales de dominio y hosting vigentes con nosotros)
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-1 py-4 mt-20 mb-6">
+                <p class="font-unb text-xl font-semibold bg-secondary-dark text-font px-5 py-1.5 box-decoration-clone w-fit justify-self-center text-center rounded-lg">Acompañamiento Estratégico (5 Meses):</p>
+                <ul class="my-20 grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-6 text-center">
+                    <li>
+                        <MessageCircle size={'2rem'} class="mx-auto"/>
+                        <p class="font-bold mb-2 mt-4">Canal de soporte directo por WhatsApp.</p>
+                    </li>
+                    <li>
+                        <ChartPie size={'2rem'} class="mx-auto"/>
+                        <p class="font-bold mb-2 mt-4">Sesión mensual de consultoría para analizar métricas reales.</p>
+                    </li>
+                    <li>
+                        <Scroll size={'2rem'} class="mx-auto"/>
+                        <p class="font-bold mb-2 mt-4">Reporte ejecutivo mensual de rendimiento.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-primary p-8 rounded-2xl text-secondary-light flex flex-col lg:flex-row gap-12 items-center mb-28">
+                <Image src={warrantyImage} alt={'Garantía Sistema de Presencia digital | DevWorks Studio'} class="flex-1 object-cover aspect-video rounded-xl" width={500}/>
+                <div class="flex-1">
+                    <FileBadge size={'2rem'}/>
+                    <h4 class="text-3xl font-bold font-unb mt-4">Garantía</h4>
+                    <p class="mt-3 text-base">Si al finalizar los primeros 6 meses los reportes no demuestran un incremento medible respecto al diagnóstico inicial, trabajamos 12 meses adicionales 100% gratis en mantenimiento, mejorás de contenido (no diseño) y SEO.</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <Button variant="secondary" label="Agenda tu consulta inicial" href="/">
+                    <ArrowUpRight slot={'right-icon'}/>
+                </Button>
+            </div>
+        </div>
+        <span class="w-full h-px bg-primary-light block my-28"></span>
+        <div id="service-section" class="px-4">
+            <div class="flex-1 text-center">
+                <Sparkles size={'4rem'} class="mx-auto mb-12 text-font"/>
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-unb font-semibold text-font">Suscripción de Web Gestionada</h2>
+                    <p class="text-base mt-4 text-gray-600 max-w-2xl mx-auto">Ideal para profesionistas independientes (médicos, abogados, arquitectos, consultores) que requieren una página web profesional de alta velocidad sin una gran inversión inicial.</p>
+                </div>
+            </div>
+            <div class="mt-20 flex flex-col gap-12 max-w-xl mx-auto">
+                <div>
+                    <p class="font-unb text-xl font-medium bg-primary text-font-light tracking-wide  px-5 py-1.5 box-decoration-clone w-fit rounded-lg mx-auto">Arranque Inmediato:</p>
+                    <p class="text-gray-600 text-center mt-8">
+                        Despliegue en <strong>48 a 72 horas</strong> con estructuras probadas por industria.
+                    </p>
+                </div>
+                <div>
+                    <p class="font-unb text-xl font-medium bg-primary text-font-light tracking-wide  px-5 py-1.5 box-decoration-clone w-fit rounded-lg mx-auto">Inversión Inicial Minima:</p>
+                    <p class="text-gray-600 text-center mt-8">
+                        <strong>$6,500 MXN + IVA</strong> (personalización completa para reflejar marca y elaboración de contenido enfocado a tus servicios y area de servicio).
+                    </p>
+                </div>
+
+            </div>
+            <div class="flex-1 py-4 mt-12">
+                <p class="font-unb text-xl font-medium tracking-wide bg-primary text-font-light px-5 py-1.5 box-decoration-clone w-fit justify-self-center text-center rounded-lg">Planes de Mantenimiento Mensual:</p>
+                <ul class="my-12 flex flex-col md:flex-row items-center">
+                    <li class="text-font flex-1 md:px-12 py-12 md:py-6">
+                        <MessageCircle size={'2rem'} class="mx-auto"/>
+                        <div class="text-center">
+                            <h6 class="font-semibold font-unb mb-1 mt-4 text-lg text-font">Plan Esencial</h6>
+                            <p class="font-semibold text-primary-dark text-lg">$1,200 MXN + IVA/mes</p>
+                            <p class="text-sm text-gray-600"> $12,000 MXN/año con renovación de dominio y 2 meses gratis</p>
+                        </div>
+                        <ul class="mt-8">
+                            <li class="flex gap-2 items-center"><Check size={'1rem'}/> Hosting de alta velocidad</li>
+                            <li class="flex gap-2 items-center"><Check size={'1rem'}/> Certificado SSL</li>
+                            <li class="flex gap-2 items-center"><Check size={'1rem'}/> Monitoreo de seguridad 24/7</li>
+                            <li class="flex gap-2 items-center"><Check size={'1rem'}/> Soporte técnico por Whatsapp personalizado</li>
+                        </ul>
+                    </li>
+                    <li class="text-font flex-1 md:border-l border-l-0 border-t md:border-t-0 border-primary-light/40 md:px-12 py-12 md:py-6">
+                        <MessageCircle size={'2rem'} class="mx-auto"/>
+                        <div class="text-center">
+                            <h6 class="font-semibold font-unb mb-1 mt-4 text-lg text-font">Plan Concierge</h6>
+                            <p class="font-semibold text-primary-dark text-lg">$2,800 MXN + IVA/mes </p>
+                            <p class="text-sm text-gray-600">$28,000 MXN/año con  renovación de dominio y 2 meses gratis</p>
+                        </div>
+                        <ul class="mt-8">
+                            <li class="text-primary-dark font-bold flex gap-2 items-center"><Check size={'1rem'}/> Todo lo del Plan Esencial</li>
+                            <li>
+                                <div class="flex gap-2 items-center">
+                                    <Check size={'1rem'}/>
+                                    <h6 class="">Gestión delegada</h6>
+                                </div>
+                                <p class="text-gray-600 text-sm mt-1 ml-6">Hasta 3 horas mensuales de edición de contenidos, textos y fotografías enviándonos una solicitud por correo o WhatsApp.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-secondary-light p-8 rounded-2xl text-font flex flex-col lg:flex-row gap-12 items-center mb-20 mt-12">
+                <Image src={warrantyImage} alt={'Garantía Sistema de Presencia digital | DevWorks Studio'} class="flex-1 object-cover aspect-video rounded-xl" width={500}/>
+                <div class="flex-1">
+                    <FileBadge size={'2rem'}/>
+                    <h4 class="text-3xl font-bold font-unb mt-4">Garantía</h4>
+                    <p class="mt-3 text-base">Si al finalizar los primeros 6 meses los reportes no demuestran un incremento medible respecto al diagnóstico inicial, trabajamos 12 meses adicionales 100% gratis en mantenimiento, mejorás de contenido (no diseño) y SEO.</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <Button label="Agenda tu consulta inicial" href="/">
+                    <ArrowUpRight slot={'right-icon'}/>
+                </Button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+const container = document.querySelector('#container')
+const section = document.querySelector("#service-section") as HTMLDivElement;
+
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.1
+};
+
+const colorChange = (entries: IntersectionObserverEntry[]) => {
+    if (entries[0].isIntersecting) {
+        container?.classList.add('bg-color-white')
+        container?.classList.remove('bg-primary-dark')
+    } else {
+        container?.classList.remove('bg-color-white!');
+        container?.classList.add('bg-primary-dark')
+    }
+};
+
+const observer = new IntersectionObserver(colorChange, options);
+observer.observe(section);
+</script>

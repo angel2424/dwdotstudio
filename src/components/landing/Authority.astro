@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets'
+import allende from '../../assets/images/allende-logo.png'
+import drgilberto from '../../assets/images/dr-gilberto.svg'
+import maverick from '../../assets/images/maverick-logo.svg'
+---
+
+<section class="md:px-11 lg:px-20 py-28 max-w-7xl mx-auto">
+    <h2 class="font-unb text-5xl flex-1 font-semibold text-font mb-6">No construimos folletos digitales; <span class="text-primary">creamos activos comerciales que generan retorno.</span></h2>
+    <p class="text-gray-600 text-lg">Hemos diseñado soluciones a la medida para sectores donde la confianza y la velocidad de respuesta definen la venta.</p>
+    <p class="uppercase text-font font-bold text-sm mt-16">Ellos confiaron en nosotros</p>
+    <div class="flex gap-20 items-center justify-between">
+        <a href="https://allendecoahuila.com" target="_blank">
+            <Image src={allende} alt={'Municipio de Allende, Coahuila | Desarrollado por DevWorks Studio'} height="65" />
+        </a>
+        <a href="https://www.drgilbertoviesca.com/" target="_blank">
+            <Image src={drgilberto} alt={'Dr. Gilberto Viesca Cirujano Dentista | Desarrollado por DevWorks Studio'} height="60" />
+        </a>
+        <a href="https://www.maverickmobilehomeservices.com/" target="_blank">
+            <Image src={maverick} alt={'Maverick Mobile Home Services | Desarrollado por DevWorks Studio'} height="150" />
+        </a>
+    </div>
+</section>

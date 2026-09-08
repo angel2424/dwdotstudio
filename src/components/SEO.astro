@@ -1,0 +1,64 @@
+---
+import { SITE_CONFIG, type PageMetadata } from '../lib/seo';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  keywords?: string[];
+  schema?: object | object[];
+}
+
+const {
+  title = `${SITE_CONFIG.name} | Infraestructura Digital y Validación Comercial en Coahuila`,
+  description = 'Instalamos plataformas web de alta conversión, correos corporativos blindados y dominio en Google Maps para clínicas y empresas de transporte en Coahuila.',
+  canonical = Astro.url.href,
+  ogImage = SITE_CONFIG.defaultOgImage,
+  ogType = 'website',
+  keywords = [],
+  schema,
+} = Astro.props;
+
+const canonicalURL = new URL(canonical, Astro.site || SITE_CONFIG.domain).href;
+const socialImageURL = new URL(ogImage, Astro.site || SITE_CONFIG.domain).href;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+{keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+<link rel="canonical" href={canonicalURL} />
+<meta name="robots" content="index, follow" />
+<meta name="author" content={SITE_CONFIG.name} />
+<meta name="geo.region" content="MX-COA" />
+<meta name="geo.placename" content="Piedras Negras" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={socialImageURL} />
+<meta property="og:site_name" content={SITE_CONFIG.name} />
+<meta property="og:locale" content={SITE_CONFIG.defaultLocale} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImageURL} />
+<meta name="twitter:site" content={SITE_CONFIG.twitterHandle} />
+<meta name="twitter:creator" content={SITE_CONFIG.twitterHandle} />
+
+<!-- Structured Data (JSON-LD) -->
+{schema && (
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(Array.isArray(schema) ? schema : [schema])}
+  />
+)}

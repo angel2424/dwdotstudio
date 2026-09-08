@@ -1,19 +1,26 @@
 ---
-import Authority from "../components/landing/Authority.astro";
 import Hero from "../components/landing/Hero.astro";
 import Hook from "../components/landing/Hook.astro";
 import Offer from "../components/landing/Offer.astro";
+import Testimonial from "../components/landing/Testimonial.astro";
+import Warranty from "../components/landing/Warranty.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import { PAGES_METADATA, getOrganizationSchema } from "../lib/seo";
 
-const metaData = {
-    title: 'Diseño Web y Posicionamiento Local en Coahuila | DevWorks Studio',
-    description: 'Convierte tu sitio web en un sistema de ventas 24/7. Diseño web de alta velocidad, SEO local en Google y soporte continuo para empresas en Coahuila.'
-}
+const meta = PAGES_METADATA.home;
+const schema = getOrganizationSchema();
 ---
 
-<MainLayout title={metaData.title} description={metaData.description}>
-	<Hero />
-    <Authority />
-    <Hook />
-    <Offer />
+<MainLayout
+  title={meta.title}
+  description={meta.description}
+  canonical={meta.canonical}
+  keywords={meta.keywords}
+  schema={schema}
+>
+  <Hero />
+  <Hook />
+  <Offer />
+  <Warranty />
+  <Testimonial />
 </MainLayout>

@@ -1,31 +1,37 @@
 ---
 import { Goal, Target } from "@lucide/astro";
-
-
+import { Icon } from 'astro-icon/components'
 ---
 
-<section class="px-4 md:px-11 lg:px-20 py-28 max-w-5xl mx-auto mb-12">
-    <h2 class="font-unb text-5xl flex-1 font-semibold text-font mb-20 lg:text-center">Del flujo impredecible de clientes <span class="text-primary">a una plataforma formal de captación continua.</span></h2>
-    <div class="flex-1 flex flex-col gap-10 lg:gap-12 items-start text-justify">
-        <div class="flex-1 flex flex-col gap-3">
-            <p class="text-lg font-bold text-primary-dark">La Realidad Actual:</p>
+<section class="px-4 md:px-11 lg:px-20 py-28 max-w-8xl mx-auto mb-12">
+    <h2 class="font-unb text-5xl flex-1 font-semibold text-font leading-snug">Tener solo una página de Facebook y cotizar con @gmail le está costando <span class="text-primary">millones</span> a tu negocio.</h2>
+    <p class="text-lg text-gray-700 mt-3">Muchos negocios en Coahuila ganan clientes a la antigua, pero se topan con un techo invisible:</p>
+    <div class="flex-1 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-4 items-start mt-12">
+        <div class="flex-1 flex flex-col justify-between gap-3 border border-primary-light/50 p-6 rounded-2xl h-full">
+            <div class="mb-4">
+                <Icon name="fa6-brands:whatsapp" size={'1.8rem'} class="text-primary-dark mb-2" />
+                <p class="text-lg font-bold text-primary-dark">El filtro de WhatsApp:</p>
+            </div>
             <p class="text-lg leading-tight">
-                Publicas contenido con regularidad en redes sociales, pero el flujo de clientes es inconsistente. Cuando envías una cotización desde una cuenta @gmail.com o diriges tráfico a un perfil sin sitio web formal, transmites la imagen de un proyecto improvisado, perdiendo contratos frente a competidores con mayor presencia digital.
+                Tu equipo pierde 2 a 3 horas diarias respondiendo "¿precio?" a curiosos que nunca compran, porque tu presencia no precalifica a los prospectos.
             </p>
         </div>
-        <div class="flex-1 flex flex-col gap-3">
-            <p class="text-lg font-bold text-primary-dark">El Resultado Deseado:</p>
+        <div class="flex-1 flex flex-col justify-between gap-3 border border-primary-light/50 p-6 rounded-2xl h-full">
+            <div class="mb-4">
+                <Icon name="ic:outline-money-off" size={'2rem'} class="text-primary-dark mb-1" />
+                <p class="text-lg font-bold text-primary-dark">La descalificación de clientes con dinero:</p>
+            </div>
             <p class="text-lg leading-tight">
-                Una presencia digital consolidada con dominio corporativo, posicionamiento en los primeros lugares de búsqueda local y un embudo web que filtra a los curiosos para entregarte prospectos listos para agendar.
+                Pacientes estadounidenses del sur de Texas o jefes de compras en maquiladoras no confían en proveedores sin página web oficial ni correos corporativos verificados.
             </p>
         </div>
-    </div>
-    <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-12 bg-primary/20 p-6 lg:px-12 lg:py-9 mt-12 rounded-2xl">
-        <Goal size={'4rem'} class="text-primary-dark"/>
-        <div class="flex flex-col gap-3 flex-1">
-            <p class="text-2xl font-unb font-semibold text-primary-dark">La Solución</p>
-            <p class="text-justify text-lg font-medium text-font leading-tight">
-               Eliminamos la fricción técnica. Nos encargamos del diseño, la redacción estratégica, la seguridad del servidor y la optimización en Google para que tú solo te concentres en atender a tus clientes.
+        <div class="flex-1 flex flex-col justify-between gap-3 border border-primary-light/50 p-6 rounded-2xl h-full">
+            <div class="mb-4">
+                <Icon name="ic:outline-visibility-off" size={'2rem'} class="text-primary-dark mb-1" />
+                <p class="text-lg font-bold text-primary-dark">Invisibilidad en Google:</p>
+            </div>
+            <p class="text-lg leading-tight">
+                 Cada vez que alguien busca tu especialidad o servicio de transporte en Google, tu competencia aparece primero simplemente porque configuraron su ficha local.
             </p>
         </div>
     </div>

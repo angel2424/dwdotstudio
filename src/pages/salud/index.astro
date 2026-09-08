@@ -1,0 +1,26 @@
+---
+
+import Warranty from "../../components/salud/Warranty.astro";
+import Hero from "../../components/salud/Hero.astro";
+import Hook from "../../components/salud/Hook.astro";
+import Offer from "../../components/salud/Offer.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+import { PAGES_METADATA, getOrganizationSchema } from "../../lib/seo";
+
+const meta = PAGES_METADATA.salud;
+const schema = getOrganizationSchema();
+---
+
+<MainLayout
+  title={meta.title}
+  description={meta.description}
+  canonical={meta.canonical}
+  keywords={meta.keywords}
+  schema={schema}
+>
+  <Hero />
+  <Hook />
+  <Offer />
+  <Warranty />
+</MainLayout>

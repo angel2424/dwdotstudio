@@ -1,0 +1,83 @@
+---
+import { Image } from "astro:assets";
+import offerImg from '../../assets/images/ds-img1.jpg'
+import { ArrowUpRight } from "@lucide/astro";
+import Button from "../ui/Button.astro";
+import { Icon } from 'astro-icon/components'
+import transport from '../../assets/images/transport.jpg'
+import healthcare from '../../assets/images/healthcare.jpg'
+---
+
+<section id="services" class="bg-primary-dark transition-colors ease-linear duration-200">
+    <div class="px-4 md:px-11 lg:px-20 py-28 max-w-8xl mx-auto text-secondary-light">
+        <div>
+            <div class="flex-1">
+                <Image src={offerImg} alt='Servicios DevWorks Studio | Imagen' class='w-full aspect-6/2 rounded-2xl object-cover' />
+            </div>
+            <div class="flex-1 py-16 h-full flex flex-col items-center">
+                <div class="flex flex-col lg:flex-row lg:gap-20">
+                    <h2 class="text-4xl font-unb font-semibold text-font-light max-w-xl">Lo que incluye el sistema médico <span class="text-[#AED7EA]">(Done-For-You)</span></h2>
+                    <p class="text-lg mt-6">
+                        Nos encargamos de toda la ingeniería comercial y técnica para que tu única tarea sea atender a tus pacientes que llegan listos para comprar.
+                    </p>
+                </div>
+                <span class="w-full h-px bg-primary-light block my-16"></span>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-12">
+                    <div class="">
+                        <Icon name="ic:round-translate" size="1.6rem" class="mb-4"/>
+                        <h5 class="flex-1 font-unb font-semibold mb-1">Sitio personalizado Bilingüe (Español / Inglés):</h5>
+                        <p class="flex-1 text-base text-secondary-light">Diseñado específicamente para que ambos pacientes mexicanos y estadounidenses entiendan tus credenciales y procedimientos.</p>
+                    </div>
+                    <div class="">
+                        <Icon name="ic:round-business" size="1.6rem" class="mb-4"/>
+                        <h5 class="flex-1 font-unb font-semibold mb-1">Dominación Local en Google Maps:</h5>
+                        <p class="flex-1 text-base text-secondary-light">Optimización técnica de tu ficha para aparecer en los primeros 3 lugares cuando busquen tu especialidad en Piedras Negras o desde el sur de Texas.</p>
+                    </div>
+                    <div class="">
+                        <Icon name="fa6-brands:whatsapp" size="1.6rem" class="mb-4"/>
+                        <h5 class="flex-1 font-unb font-semibold mb-1">Enrutamiento Inteligente a WhatsApp:</h5>
+                        <p class="flex-1 text-base text-secondary-light">Formulario de 3 pasos que solicita motivo de consulta, fecha estimada y ciudad de origen antes de abrir la conversación.</p>
+                    </div>
+                    <div class="">
+                        <Icon name="ic:outline-mark-email-unread" size="1.6rem" class="mb-4"/>
+                        <h5 class="flex-1 font-unb font-semibold mb-1">Google Workspace Institucional:</h5>
+                        <p class="flex-1 text-base text-secondary-light">Correos profesionales (ej. citas@tuconsultorio.com) para enviar recetas, historiales y presupuestos con formalidad quirúrgica.</p>
+                    </div>
+                    <div class="">
+                        <Icon name="ic:outline-hardware" size="1.6rem" class="mb-4"/>
+                        <h5 class="flex-1 font-unb font-semibold mb-1">Mantenimiento y Actualizaciones por Nosotros:</h5>
+                        <p class="flex-1 text-base text-secondary-light">Si agregas un nuevo tratamiento o cambias fotos de tus instalaciones, solo nos mandas un correo y lo actualizamos por ti.</p>
+                    </div>
+                </div>
+                <Button variant="secondary" label="Agenda tu consulta inicial" target="_blank" styles="mt-16" href="https://cal.com/devworksstudio/consultoria-gratuita">
+                    <ArrowUpRight slot={'right-icon'}/>
+                </Button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+const container = document.querySelector('#services')
+const section = document.querySelector("#service-section") as HTMLDivElement;
+
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.1
+};
+
+const colorChange = (entries: IntersectionObserverEntry[]) => {
+    if (entries[0].isIntersecting) {
+        container?.classList.add('bg-color-white')
+        container?.classList.remove('bg-primary-dark')
+    } else {
+        container?.classList.remove('bg-color-white!');
+        container?.classList.add('bg-primary-dark')
+    }
+};
+
+const observer = new IntersectionObserver(colorChange, options);
+observer.observe(section);
+</script>

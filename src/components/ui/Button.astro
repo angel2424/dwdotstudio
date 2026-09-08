@@ -4,10 +4,11 @@ interface Props {
     label: string;
     href: string;
     target?: string;
+    styles?: string;
     variant?: 'primary' | 'secondary' | 'outlined' | 'ghost';
 }
 
-const {href, variant = 'primary', label, light = false, target} = Astro.props
+const {href, variant = 'primary', label, light = false, target, styles} = Astro.props
 
 const variantStyles = {
     primary: 'bg-primary text-font-light hover:bg-primary-dark px-8 py-3',
@@ -19,7 +20,7 @@ const variantStyles = {
 const baseStyles = 'rounded-full text-xs group transition-all ease-linear duration-150 flex gap-3 items-center font-unb w-fit'
 ---
 
-<a class:list={[baseStyles, variantStyles[variant], light && (variant === 'outlined' || variant === 'ghost') ? 'text-font-light!' : '' ]} href={href} target={target}>
+<a class:list={[baseStyles, variantStyles[variant], styles, light && (variant === 'outlined' || variant === 'ghost') ? 'text-font-light!' : '' ]} href={href} target={target}>
     <slot name="icon" class="" />
     <p class="clip h-4 flex flex-col gap-2 justify-start">
         <span class="group-hover:-translate-y-6 transition-all ease-in-out duration-200">

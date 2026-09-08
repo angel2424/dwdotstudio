@@ -1,0 +1,33 @@
+---
+import { ArrowDown, ArrowUpRight } from '@lucide/astro'
+import img from '../../assets/images/healthcare.jpg'
+import Button from '../ui/Button.astro'
+import { Image } from 'astro:assets'
+
+---
+
+<section class="px-4 md:px-11 lg:px-20 py-20 max-w-8xl mx-auto min-h-screen lg:min-h-[calc(100vh-120px)] h-full flex flex-col-reverse xl:flex-row gap-8 items-center">
+    <div class="flex-2 flex flex-col justify-center">
+        <h1 class="text-font font-bold leading-tight text-4xl tracking-normal max-w-5xl">
+            <mark class="bg-primary-dark text-white text-xl px-4 py-1 box-decoration-clone rounded-lg">
+            El sistema digital de citas y confianza médica<br>
+            </mark>
+            <span class="font-unb">
+                Que atrae a pacientes calificados de Coahuila y el sur de Texas.
+            </span>
+        </h1>
+        <p class="text-base text-gray-600 max-w-md mt-4 mb-12">Instalamos una plataforma bilingüe de alta conversión y optimizamos tu presencia en Google Maps para que pacientes de Eagle Pass, Del Rio y la región encuentren tu consultorio primero, verifiquen tus credenciales y agenden valoraciones de alto valor sin saturar tu WhatsApp con curiosos.</p>
+        <Button label='Agendar auditoría de visibilidad médica' target='_blank' href='https://cal.com/devworksstudio/consultoria-gratuita'>
+            <ArrowUpRight slot='right-icon'} size={'1rem'}/>
+        </Button>
+        <p class="text-sm italic mt-3 text-gray-500 max-w-md">Diagnóstico confidencial de 10 minutos para directores y especialistas médicos.</p>
+    </div>
+    <Image src={img} alt={'Servicios para consultorios médicos y dentistas | DevWorks Studio'} class="flex-1 object-cover aspect-video md:aspect-5/2 xl:aspect-5/4 w-full h-auto rounded-2xl" />
+</section>
+
+<script>
+    const video = document.getElementById('hero-video') as HTMLVideoElement;
+
+    video.playbackRate = 0.65;
+
+</script>

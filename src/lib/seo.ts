@@ -52,18 +52,19 @@ export const PAGES_METADATA: Record<string, PageMetadata> = {
     ],
   },
   transporte: {
-    title: 'Validación de Flota y Reclutamiento de Choferes | DevWorks Studio',
+    title: 'Validación de Flota y Confianza Comercial para Transporte | DevWorks',
     description:
-      'Ficha técnica digital de flota para licitaciones con maquiladoras y bolsa de trabajo móvil para choferes de quinta rueda en Piedras Negras y Coahuila.',
+      'Proyecta la solidez y seguridad que exigen las maquiladoras y brokers de carga para cerrar contratos de fletes. Infraestructura corporativa en Piedras Negras y Coahuila.',
     canonical: 'https://devworks.studio/transporte',
     ogType: 'website',
     keywords: [
       'páginas web líneas de transporte',
       'validación de flota maquiladoras',
-      'reclutamiento de choferes coahuila',
+      'licitaciones fletes coahuila',
       'autotransporte federal piedras negras',
       'fletes binacionales transfer',
-      'proveedores transporte coahuila',
+      'proveedores transporte maquila',
+      'alta de proveedores autotransporte',
     ],
   },
   piedrasNegras: {

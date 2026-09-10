@@ -1,0 +1,33 @@
+---
+import { ArrowDown, ArrowUpRight } from '@lucide/astro'
+import img from '../../assets/images/transport.jpg'
+import Button from '../ui/Button.astro'
+import { Image } from 'astro:assets'
+
+---
+
+<section class="px-4 md:px-11 lg:px-20 py-20 max-w-8xl mx-auto min-h-screen lg:min-h-[calc(100vh-120px)] h-full flex flex-col-reverse xl:flex-row gap-6 items-center">
+    <div class="flex-2 flex flex-col justify-center">
+        <h1 class="text-font font-bold leading-tight text-4xl tracking-normal max-w-5xl">
+            <mark class="bg-primary-dark text-white text-xl px-4 py-1 box-decoration-clone rounded-lg">
+            Proyecta la solidez y seguridad <br>
+            </mark>
+            <span class="font-unb">
+               Que exigen las maquiladoras para cerrar contratos de fletes.
+            </span>
+        </h1>
+        <p class="text-base text-gray-600 max-w-lg mt-4 mb-12">Instalamos la infraestructura digital corporativa de tu línea de transporte en Piedras Negras y Coahuila: catálogo visual de flota y rutas, comprobación de rastreo GPS, correos blindados para tráfico y carta de presentación ejecutiva en PDF lista para enviar a compras. (Incluye módulo móvil integrado para captar choferes calificados sin esfuerzo extra).</p>
+        <Button label='Solicitar auditoría de presencia comercial gratis' target='_blank' href='https://cal.com/devworksstudio/consultoria-gratuita'>
+            <ArrowUpRight slot='right-icon'} size={'1rem'}/>
+        </Button>
+        <p class="text-sm italic mt-3 text-gray-500 max-w-md">Evaluamos cómo te perciben hoy los departamentos de compras y brokers de Texas cuando buscan transportistas en la región.</p>
+    </div>
+    <Image src={img} alt={'Servicios para consultorios médicos y dentistas | DevWorks Studio'} class="flex-1 object-cover aspect-video md:aspect-5/2 xl:aspect-5/4 w-full h-auto rounded-2xl" />
+</section>
+
+<script>
+    const video = document.getElementById('hero-video') as HTMLVideoElement;
+
+    video.playbackRate = 0.65;
+
+</script>

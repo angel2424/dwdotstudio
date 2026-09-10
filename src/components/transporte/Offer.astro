@@ -1,0 +1,88 @@
+---
+import { Image } from "astro:assets";
+import offerImg from '../../assets/images/ds-img1.jpg'
+import { ArrowUpRight } from "@lucide/astro";
+import Button from "../ui/Button.astro";
+import { Icon } from 'astro-icon/components'
+import transport from '../../assets/images/transport.jpg'
+import healthcare from '../../assets/images/healthcare.jpg'
+---
+
+<section id="services" class="bg-primary-dark transition-colors ease-linear duration-200">
+    <div class="px-4 md:px-11 lg:px-20 py-28 max-w-8xl mx-auto text-secondary-light">
+        <div>
+            <div class="flex-1">
+                <Image src={offerImg} alt='Servicios DevWorks Studio | Imagen' class='w-full aspect-6/2 rounded-2xl object-cover' />
+            </div>
+            <div class="flex-1 py-16 h-full flex flex-col items-center">
+                <div class="flex flex-col lg:flex-row lg:gap-20">
+                    <h2 class="text-4xl font-unb font-semibold text-font-light max-w-xl">El respaldo digital que te posiciona como <span class="text-[#AED7EA]">una empresa de autotransporte de primer nivel:</span></h2>
+                    <p class="text-lg mt-6">
+                        Nos encargamos de toda la ingeniería comercial y técnica para que tu única tarea sea atender a tus clientes que llegan listos para comprar.
+                    </p>
+                </div>
+                <span class="w-full h-px bg-primary-light block my-16"></span>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-12">
+                    <div class="">
+                        <Icon name="ic:round-translate" size="1.6rem" class="mb-4"/>
+                        <h5 class="flex-1 font-unb font-semibold mb-1">Catálogo de Flota y Capacidad Operativa</h5>
+                        <p class="flex-1 text-base text-secondary-light">Presenta visualmente tus tipos de unidades (cajas secas de 53ft, plataformas, refrigerados, tractocamiones de modelo reciente), protocolos de rastreo satelital GPS 24/7 y cobertura de rutas (transfer fronterizo, rutas nacionales). Brinda la tranquilidad inmediata que exige un director de compras.</p>
+                    </div>
+                    <div class="">
+                        <Icon name="ic:round-business" size="1.6rem" class="mb-4"/>
+                        <h5 class="flex-1 font-unb font-semibold mb-1">Carta de Presentación Ejecutiva en PDF (Descarga en 1 Clic)</h5>
+                        <p class="flex-1 text-base text-secondary-light">Un folleto corporativo de 1 página, limpio y profesional, listo para descargar en tu web o adjuntar a cada cotización de flete, con el resumen de tu equipo, sellos de confianza y canales oficiales de contacto para dar la mejor primera impresión.</p>
+                    </div>
+                    <div class="">
+                        <Icon name="fa6-brands:whatsapp" size="1.6rem" class="mb-4"/>
+                        <h5 class="flex-1 font-unb font-semibold mb-1">Creación de cuenta profesional Google Workspace</h5>
+                        <p class="flex-1 text-base text-secondary-light">Elimina el correo personal o de Gmail. Toda tu comunicación comercial y operativa viaja con dominios blindados tipo trafico@tulineadecarga.com y ventas@tulineadecarga.com, con registros SPF/DKIM que garantizan que tus cotizaciones y cartas porte nunca caigan en spam.</p>
+                    </div>
+                    <div class="">
+                        <Icon name="ic:outline-mark-email-unread" size="1.6rem" class="mb-4"/>
+                        <h5 class="flex-1 font-unb font-semibold mb-1">Posicionamiento Local en Google</h5>
+                        <p class="flex-1 text-base text-secondary-light">Optimización para que empresas que buscan fletes locales, transfer fronterizo o fletes dedicados en Piedras Negras y Coahuila encuentren tu línea de transporte antes que a los competidores informales.</p>
+                    </div>
+                    <div class="">
+                        <Icon name="ic:outline-hardware" size="1.6rem" class="mb-4"/>
+                        <h5 class="flex-1 font-unb font-semibold mb-1">Módulo Móvil de Reclutamiento (Beneficio Agregado)</h5>
+                        <p class="flex-1 text-base text-secondary-light">Formulario sencillo adaptado a celulares para que los choferes de quinta rueda postulen su experiencia y licencia directamente al WhatsApp de Recursos Humanos, manteniendo tus tractores siempre en ruta sin que tengas que pagar portales externos de empleo.</p>
+                    </div>
+                    <div class="">
+                        <Icon name="ic:outline-hardware" size="1.6rem" class="mb-4"/>
+                        <h5 class="flex-1 font-unb font-semibold mb-1">Mantenimiento y Actualizaciones por Nosotros:</h5>
+                        <p class="flex-1 text-base text-secondary-light">Si agregas un nuevo tratamiento o cambias fotos de tus instalaciones, solo nos mandas un correo y lo actualizamos por ti.</p>
+                    </div>
+                </div>
+                <Button variant="secondary" label="Agenda tu consulta inicial" target="_blank" styles="mt-16" href="https://cal.com/devworksstudio/consultoria-gratuita">
+                    <ArrowUpRight slot={'right-icon'}/>
+                </Button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+const container = document.querySelector('#services')
+const section = document.querySelector("#service-section") as HTMLDivElement;
+
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.1
+};
+
+const colorChange = (entries: IntersectionObserverEntry[]) => {
+    if (entries[0].isIntersecting) {
+        container?.classList.add('bg-color-white')
+        container?.classList.remove('bg-primary-dark')
+    } else {
+        container?.classList.remove('bg-color-white!');
+        container?.classList.add('bg-primary-dark')
+    }
+};
+
+const observer = new IntersectionObserver(colorChange, options);
+observer.observe(section);
+</script>

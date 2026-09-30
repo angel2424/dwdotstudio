@@ -13,7 +13,7 @@ export const SITE_CONFIG = {
   defaultOgImage: 'https://devworks.studio/og-image.jpg',
   defaultLocale: 'es_MX',
   twitterHandle: '@devworks_studio',
-  phone: '+528781234567',
+  phone: '+528781235015',
   email: 'contacto@devworks.studio',
   city: 'Piedras Negras',
   region: 'Coahuila',

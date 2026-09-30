@@ -10,7 +10,7 @@ export interface PageMetadata {
 export const SITE_CONFIG = {
   name: 'DevWorks Studio',
   domain: 'https://devworks.studio',
-  defaultOgImage: 'https://devworks.studio/og-image.jpg',
+  defaultOgImage: 'https://devworks.studio/og-img.png',
   defaultLocale: 'es_MX',
   twitterHandle: '@devworks_studio',
   phone: '+528781235015',
